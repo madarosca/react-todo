@@ -8,5 +8,6 @@
         "decoratorsLegacy": true
       }
     ]
-  ]
+  ],
+  "plugins": ["@babel/transform-react-jsx"]
 }

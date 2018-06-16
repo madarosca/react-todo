@@ -2,13 +2,16 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html"
+  template: './src/index.html',
+  filename: './index.html'
 });
 
 const cssPlugin = new ExtractTextPlugin('styles.css');
 
 module.exports = {
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         rules: [
             {
@@ -24,8 +27,23 @@ module.exports = {
                     fallback: "style-loader",
                     use: "css-loader!sass-loader",
                 })
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    query: {
+                        cacheDirectory: true,
+                        presets: ['@babel/preset-react']
+                      }
+                },
             }
-        ]
+        ],
     },
     plugins: [
         htmlPlugin,
