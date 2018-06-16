@@ -1,9 +1,31 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
+import Welcome from './containers/Welcome';
 
-const Index = () => {
-  return <div>Hello React!</div>;
-};
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+        };
+    }
 
-ReactDOM.render(<Index />, document.getElementById("root"));
+    componentDidMount() {
+        let person = prompt("Please enter your name", this.state.name);
+        this.setState({
+            name: person
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <Welcome name={this.state.name} />
+            </div>
+        );
+    }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
