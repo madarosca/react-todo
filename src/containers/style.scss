@@ -1,6 +1,9 @@
-
 .listMargins {
-    margin-top: 30px;
+    margin-top: 0;
+
+    @include md {
+        margin-top: 30px;
+    }
 }
 
 .done,
