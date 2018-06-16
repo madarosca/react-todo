@@ -1,17 +1,7 @@
-.listMargins {
-    margin-top: 30px;
-}
-.toBuyItems {
-    color: red;
-    &:hover {
-        cursor: pointer;
-        color: green;
-    }
-}
-.boughtItems {
-    color: green;
-    &:hover {
-        cursor: pointer;
-        color: red;
-    }
+@import 'containers/style.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
 }

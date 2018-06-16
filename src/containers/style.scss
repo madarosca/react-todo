@@ -1,0 +1,33 @@
+
+.listMargins {
+    margin-top: 30px;
+}
+
+.done,
+.delete {
+    display: none;
+}
+
+.toBuyItems {
+    color: red;
+    &:hover {
+        cursor: pointer;
+        color: green;
+        .done {
+            display: block;
+            margin-left: 5px;
+        }
+    }
+}
+
+.boughtItems {
+    color: green;
+    &:hover {
+        cursor: pointer;
+        color: red;
+        .delete {
+            display: block;
+            margin-left: 5px;
+        }
+    }
+}

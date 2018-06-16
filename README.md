@@ -2,7 +2,7 @@
 This is a ready to use simple To Do list application, with React and Webpack.
 
 ## Usage
-1. Clone repository
+1. Clone repository and go to folder
 2. Run npm install
 3. Then depending on the build you want to run use:
 * npm run start (for development)

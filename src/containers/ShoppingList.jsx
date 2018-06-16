@@ -53,13 +53,14 @@ class ShoppingList extends React.Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-4">
+                    <div className="col-xs-12 col-md-4">
                         <div className="listMargins">
-                            <div>Add item</div>
+                            <div>Add item to the list</div>
                             <input
                                 type="text"
                                 name="shoppingItem"
                                 placeholder="Add item to buy here"
+                                className="col-xs-12 col-md-4"
                                 value={this.state.shoppingItem}
                                 onChange={this.handleChange}
                                 onKeyPress={this.handleKeyPress}
@@ -67,32 +68,30 @@ class ShoppingList extends React.Component {
                             </input>
                         </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-xs-12 col-md-4">
                         <div className="listMargins">
                             <div>To buy</div>
                             <ol>{this.state.shoppingItems.map((item, index) =>
-                                    <li
-                                        key={index}
-                                        onClick={() => this.addToBought(item)}
-                                        className="toBuyItems"
-                                    >
-                                         {item}
+                                <div key={index} className="toBuyItems row">
+                                    <li onClick={() => this.addToBought(item)}>
+                                        {item}
                                     </li>
+                                    <span className="done"><i className="fa fa-check"></i></span>
+                                </div>
                                 )}
                             </ol>
                         </div>
                     </div>
-                    <div className="col-4">
+                    <div className="col-xs-12 col-md-4">
                         <div className="listMargins">
                             <div>Bought</div>
                             <ol>{this.state.boughtItems.map((item, index) =>
-                                <li
-                                    key={index}
-                                    onClick={() => this.addToBuy(item)}
-                                    className="boughtItems"
-                                >
-                                     {item}
-                                </li>
+                                <div key={index} className="boughtItems row">
+                                    <li onClick={() => this.addToBuy(item)}>
+                                        {item}
+                                    </li>
+                                    <span className="delete"><i className="fa fa-times"></i></span>
+                                </div>
                                 )}
                             </ol>
                         </div>
