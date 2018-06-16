@@ -1,5 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
@@ -9,6 +10,14 @@ const htmlPlugin = new HtmlWebPackPlugin({
 const cssPlugin = new ExtractTextPlugin('styles.css');
 
 module.exports = {
+    mode: 'development',
+    entry: {
+      index: './src/index.js',
+    },
+    output: {
+        filename: 'main.js',
+        path: path.resolve(__dirname, 'dist')
+    },
     resolve: {
         extensions: ['.js', '.jsx']
     },

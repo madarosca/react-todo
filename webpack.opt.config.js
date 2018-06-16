@@ -9,7 +9,7 @@ module.exports = {
             new UglifyJsPlugin({
                 uglifyOptions: {
                     mangle: {
-                    keep_fnames: true,
+                        keep_fnames: true,
                     },
                 },
             })
