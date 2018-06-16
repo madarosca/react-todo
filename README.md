@@ -9,12 +9,14 @@ This is a ready to use simple To Do list application, with React and Webpack.
 * npm run start:prod
 
 ### Dependencies
-* Webpack dev-server configured with hot module reloading
 * Webpack 4
+* Webpack dev-server configured with hot module reloading
+* Webpack development and production environment setup
 * Webpack merge
-* Webpack development, production environment setup
-* @babel/env, @babel/preset-react, @babel/preset-stage-2 (version 7.0.0-beta.46)
-* Scss support
+* @babel/core, @babel/env, @babel/preset-react, @babel/preset-stage-2,@babel/plugin-transform-react-jsx (version 7.0.0-beta.51)
+* Scss support (node-sass, sass-loader)
 * NodeJS backend up & running with ExpressJS framework.
 
-#### Libraries
+### Libraries
+* Bootstrap 4
+* Font-Awesome 4
