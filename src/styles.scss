@@ -1,16 +1,17 @@
-body {
-  color: red;
-  font-size: 16px;
+.listMargins {
+    margin-top: 30px;
 }
-
-h3, p {
-  text-align: center;
+.toBuyItems {
+    color: red;
+    &:hover {
+        cursor: pointer;
+        color: green;
+    }
 }
-
-h3 {
-  font-size: 32px;
-}
-
-p {
-  font-size: 22px;
+.boughtItems {
+    color: green;
+    &:hover {
+        cursor: pointer;
+        color: red;
+    }
 }
