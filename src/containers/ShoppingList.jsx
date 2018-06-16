@@ -60,7 +60,7 @@ class ShoppingList extends React.Component {
                                 type="text"
                                 name="shoppingItem"
                                 placeholder="Add item to buy here"
-                                className="col-xs-12"
+                                className="col-12"
                                 value={this.state.shoppingItem}
                                 onChange={this.handleChange}
                                 onKeyPress={this.handleKeyPress}
