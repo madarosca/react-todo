@@ -6,7 +6,8 @@ This is a ready to use simple To Do list application, with React and Webpack.
 2. Run npm install
 3. Then depending on the build you want to run use:
 * npm start (for development)
-* npm run start:prod
+* npm run build-prod (build production)
+* npm run server (start node server)
 
 ### Dependencies
 * Webpack 4
